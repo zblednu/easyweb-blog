@@ -1,0 +1,68 @@
+html {
+    font-size: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #1c1b22;
+    color: white;
+    margin: auto;
+    max-width: 140rem;
+    height: 100vh;
+    font-family: 'Fredoka';
+}
+
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*HEADER*/
+header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.5rem 0;
+}
+
+header h1 {
+    margin-right: auto;
+}
+
+
+/*MAIN*/
+main {
+    display: flex;
+    flex-grow: 1;
+    padding: 3rem 0;
+}
+
+article {
+    flex-basis: 100rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 3rem;
+}
+
+nav {
+    flex-basis: max-content;
+}
+
+
+
+/*FOOTER*/
+footer {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    opacity: 30%;
+}
