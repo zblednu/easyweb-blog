@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host your website for free | EasyWeb</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>EasyWeb</h1>
+        <a href="../index.html">About</a>
+    </header>
+    <main>
+        <ul id="navigation">
+            <h3>Content:</h3>
+            <li>
+                Host your website for free
+            </li>
+        </ul>
+        <article>
+            <h2>Host your website for free</h2>
+            <p>
+                Want your website to be something more than a dead-weight resting on your pc? Fair enough.
+            <br>
+                We will use Github-Pages functionality to host our blog.
+            </p>
+
+            <h3>Setting up Github account</h3>
+            <p>
+                If you don't have one, go to <a href="https://github.com/">https://github.com/</a> and create an account.
+                <br>
+            </p>
+            <p>
+                We need a way for your pc to identify itself to your Github. That's what SSH-keys are for.
+
+                Run the command below in your terminal: 
+                <code>
+                    ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519.pub "" && cat ~/.ssh/id_ed25519.pub
+                </code>
+                This will generate a pair of private and public key using some fancy algorithm, place it in your user's home directory
+                and print out the created public key.
+            </p>
+            <p>
+                Copy the last line of output(the one that starts with 'ssh-ed25519'),
+                go to <a href="https://github.com/settings/ssh/new">https://github.com/settings/ssh/new</a> and paste it in the key field.
+                <br>
+                Name it however you like, then press "Add SSH Key".
+            </p>
+            <h3>Uploading your website to Github</h3>
+                <p>
+                    Go to <a href="https://github.com/new">https://github.com/new</a> to create a repo for your blog project.
+                    Name it somewhat short, <strong>make sure the visibility is set to Public</strong>, if you set it to Private other people won't be able you see your website online.
+                    <img src="../images/public-private.png">
+                    Then click create repository and copy the ssh link it generated.
+                    <img src="../images/ssh-link-guide.png">
+
+                    Now, back to your terminal, we'll upload your blog to the newly created repository.
+                    <ol>
+                        <li>cd into your blog's directory and make it a git directory</li>
+                        <code>
+                            cd <i>path-to-your-blog</i>
+                            <br>
+                            git init
+                        </code>
+                        <li>Switch branch to main and add your entire project as the first commit</li>
+                        <code>
+                            git branch -M main
+                            <br>
+                            git add .
+                            <br>
+                            git commit -m "initial commit"
+                        </code>
+                        <li>Set the pass to your github repo and upload files</li>
+                        <code>
+                            git remote add origin <i>path to your github repo you copied in step 1</i>
+                            <br>
+                            git push -u origin main
+                        </code>
+                    </ol>
+                    Now you should be able to see your blog's files uploaded to your github.
+                </p>
+            <h3>Configuring Github-Pages</h3>
+                <p>
+                    Then, on your repository page:
+                    <ol>
+                        <li>Go to your repository's "Settings" tab</li>
+                        <li>Scroll down to the "Pages" section.</li>
+                        <li>Under "Source", select the "main" branch and the root folder.</li>
+                        <li>Click "Save"</li>
+                    </ol>
+
+                    Your website will be live in a minute or two at https://username.github.io/repo-name
+                    <br> 
+                    Neat, right? From now on GitHub will serve the latest version of index.html located in the repository. 
+                    So no need to re-configure it every time. Just make sure you've pushed your changes.
+                </p>
+        </article>
+    </main>
+    <footer>Copyright @ Maksym Surovtsev 2024. All rights reserved.</footer>
+</body>
+</html>
