@@ -16,58 +16,60 @@
         <a href="../index.html">About</a>
     </header>
     <main>
-        <ul id="navigation">
+        <nav>
             <h3>Content:</h3>
-            <li>
-                Host your website for free
-            </li>
-        </ul>
+            <ul>
+                <li>Host your website for free</li>
+            </ul>
+        </nav>
         <article>
             <h2>Host your website for free</h2>
             <p>
-                Want your website to be something more than a dead-weight resting on your pc? Fair enough.
-            <br>
-                We will use Github-Pages functionality to host our blog.
-            </p>
-
-            <h3>Setting up Github account</h3>
-            <p>
-                If you don't have one, go to <a href="https://github.com/">https://github.com/</a> and create an account.
+                Want your website to be something more than a dead-weight resting on your pc?
                 <br>
+                In this article you will configure Github Pages to host your blog.
+            </p>
+            <h3 id="sub-article1">Setting up Github account</h3>
+            <p>
+                If you don't already have one, go to <a href="https://github.com">https://github.com</a> and create an account.
             </p>
             <p>
-                We need a way for your pc to identify itself to your Github. That's what SSH-keys are for.
-
+                We need a way for your PC to identify itself to your Github. That's what SSH-keys are for.
+                <br>
                 Run the command below in your terminal: 
                 <code>
                     ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519 && cat ~/.ssh/id_ed25519.pub
                 </code>
-                This will generate a pair of private and public key using some fancy algorithm, place it in your user's home directory
-                and print out the created public key.
+                It generates a pair of public/private keys using some fancy algorithm, places it in your user's home directory
+                and prints out the created public key. 
             </p>
             <p>
-                Copy the last line of output(the one that starts with 'ssh-ed25519'),
-                go to <a href="https://github.com/settings/ssh/new">https://github.com/settings/ssh/new</a> and paste it in the key field.
-                <br>
+                Copy the last line of terminal's output (the one that starts with "ssh-ed25519").
+                Go to <a href="https://github.com/settings/ssh/new">https://github.com/settings/ssh/new</a> and paste it in the "Key" field.
                 Name it however you like, then press "Add SSH Key".
             </p>
-            <h3>Uploading your website to Github</h3>
+            <h3 id="sub-article2">Uploading your website to Github</h3>
                 <p>
                     Go to <a href="https://github.com/new">https://github.com/new</a> to create a repo for your blog project.
-                    Name it somewhat short, <strong>make sure the visibility is set to Public</strong>, if you set it to Private other people won't be able you see your website online.
-                    <img src="../images/public-private.png">
+                    <div class="warning">
+                        <strong>Make sure the visibility is set to Public</strong>, if you set it to Private other people won't be able you see your website online.
+                        <img src="../images/public-private.png">
+                    </div>
                     Then click "Create repository" and copy the ssh link it generated.
                     <img src="../images/ssh-link-guide.png">
-
                     Now, back to your terminal, we'll upload your blog to the newly created repository.
+                    <div class="warning">
+                        <strong>Make sure the landing page for your website named "index.html"</strong>, it is the file that will be served first when you access your blog.
+                            It's the standard name any web-server will look to serve when no resource is specified in the web request.
+                    </div>
                     <ol>
-                        <li>cd into your blog's directory and make it a git directory</li>
+                        <li>cd into your blog's directory and make it a git directory:</li>
                         <code>
                             cd <i>path-to-your-blog</i>
                             <br>
                             git init
                         </code>
-                        <li>Switch branch to main and add your entire project as the first commit</li>
+                        <li>Switch branch to main and add your entire project as the first commit:</li>
                         <code>
                             git branch -M main
                             <br>
@@ -75,31 +77,50 @@
                             <br>
                             git commit -m "initial commit"
                         </code>
-                        <li>Set the path to your github repo and upload files</li>
+                        <li>Set the path to your GitHub repo and upload files:</li>
                         <code>
                             git remote add origin <i>ssh-path-to-your-github-repo</i>
                             <br>
                             git push -u origin main
                         </code>
                     </ol>
-                    Now you should be able to see your blog's files uploaded to your github.
+                    Now you should be able to see your blog's files uploaded to your GitHub repository.
                 </p>
-            <h3>Configuring Github-Pages</h3>
+            <h3 id="sub-article3">Configuring Github Pages</h3>
                 <p>
-                    Then, on your repository page:
+                    On your repository page:
                     <ol>
-                        <li>Go to your repository's "Settings" tab</li>
-                        <li>Scroll down to the "Pages" section.</li>
-                        <li>Under "Source", select the "main" branch and the root folder.</li>
+                        <li>Go to repository "Settings" tab</li>
+                        <li>Scroll down to the "Pages" section</li>
+                        <li>Under "Source", select "Deploy from a branch"</li>
+                        <li>Select "main" branch and the root folder</li>
                         <li>Click "Save"</li>
                     </ol>
-
-                    Your website will be live in a minute or two at https://username.github.io/repo-name
+                    In the end, it should look like so:
+                    <img src="../images/pages-configured.png" width="1000px">
+                </p>
+                <p>
+                    After a short period of time (shouldn't take more than 5 minutes), your site will be live at:
+                    <br>https://username.github.io/repo-name<br>
+                    <br>
+                    Or, simply reload the "Pages" tab and you'll see the link:
+                    <img src="../images/link-created.png" width="1000px">
                     <br> 
-                    Neat, right? From now on GitHub will serve the latest version of index.html located in the repository. 
-                    So no need to re-configure it every time. Just make sure you've pushed your changes.
+                </p>
+                <p>
+                    From now on, GitHub will serve the latest content in your repository, so there's no need to reconfigure it every time you make a change to your website.
+                    <br>
+                    Just make sure you've pushed your changes, and the file named "index.html" is present.
                 </p>
         </article>
+        <aside>
+            <h3>Jump to:</h3>
+            <ol>
+                <li><a href="#sub-article1">Setting up your GitHub account</a></li>
+                <li><a href="#sub-article2">Uploading your website to GitHub</a></li>
+                <li><a href="#sub-article3">Configuring GitHub Pages</a></li>
+            </ol>
+        </aside>
     </main>
     <footer>Copyright @ Maksym Surovtsev 2024. All rights reserved.</footer>
 </body>
