@@ -17,14 +17,18 @@
     </header>
     <main>
         <nav>
-            <h3>Content:</h3>
-            <ul>
-                <li>Host your website for free</li>
-            </ul>
+            <div class="articles">
+                <h3>Articles:</h3>
+                <ul>
+                    <li>Host your website for free</li>
+                </ul>
+            </div>
 
             <div class="coming-soon">
                 <h3>Coming soon...</h3>
-                Must-have VSCode extension
+                <ul>
+                    Must-have VSCode extension
+                </ul>
             </div>
         </nav>
         <article>
@@ -36,7 +40,7 @@
             </p>
             <h3 id="sub-article1">Setting up Github account</h3>
             <p>
-                If you don't already have one, go to <a href="https://github.com">https://github.com</a> and create an account.
+                If you don't already have one, go to <a href="https://github.com">github.com</a> and create an account.
             </p>
             <p>
                 We need a way for your PC to identify itself to your Github. That's what SSH-keys are for.
@@ -50,31 +54,37 @@
             </p>
             <p>
                 Copy the last line of terminal's output (the one that starts with "ssh-ed25519").
-                Go to <a href="https://github.com/settings/ssh/new">https://github.com/settings/ssh/new</a> and paste it in the "Key" field.
+                Go to <a href="https://github.com/settings/ssh/new">github.com/settings/ssh/new</a> and paste it in the "Key" field.
                 Name it however you like, then press "Add SSH Key".
             </p>
             <h3 id="sub-article2">Uploading your website to Github</h3>
             <p>
-                Go to <a href="https://github.com/new">https://github.com/new</a> to create a repo for your blog project.
-                <div class="warning">
-                    <strong>! Make sure the visibility is set to Public</strong>, if you set it to Private other people won't be able you see your website online.
-                    <img src="../images/public-private.png">
-                </div>
+                Go to <a href="https://github.com/new">github.com/new</a> to create a repo for your blog project.
+            </p>
+            <div class="warning">
+                <strong>! Make sure the visibility is set to Public</strong>, if you set it to Private other people won't be able you see your website online.
+                <img src="../images/public-private.png">
+            </div>
+            <p>
                 Then click "Create repository" and copy the ssh link it generated.
                 <img src="../images/ssh-link-guide.png">
                 Now, back to your terminal, we'll upload your blog to the newly created repository.
-                <div class="warning">
-                    <strong>! Make sure that file of the landing page for your website is named "index.html"</strong>.
-                        Standard behaviour for any web-server is to try to serve "index.html" when no resource is specified in the web request.
-                </div>
-                <ol>
-                    <li>cd into your blog's directory and make it a git directory:</li>
+            </p>
+            <div class="warning">
+                <strong>! Make sure that file of the landing page for your website is named "index.html"</strong>.
+                    Standard behaviour for any web-server is to try to serve "index.html" when no resource is specified in the web request.
+            </div>
+            <ol>
+                <li>
+                    cd into your blog's directory and make it a git directory:
                     <code>
                         cd <i>path-to-your-blog</i>
                         <br>
                         git init
                     </code>
-                    <li>Switch branch to main and add your entire project as the first commit:</li>
+                </li>
+                <li>
+                    Switch branch to main and add your entire project as the first commit:
                     <code>
                         git branch -M main
                         <br>
@@ -82,34 +92,37 @@
                         <br>
                         git commit -m "initial commit"
                     </code>
-                    <li>Set the path to your GitHub repo and upload files:</li>
+                </li>
+                <li>Set the path to your GitHub repo and upload files:
                     <code>
                         git remote add origin <i>ssh-path-to-your-github-repo</i>
                         <br>
                         git push -u origin main
                     </code>
-                </ol>
+                </li>
+            </ol>
+            <p>
                 You should be able to see your blog's files uploaded to your GitHub repository.
             </p>
             <h3 id="sub-article3">Configuring Github Pages</h3>
+            <p>On your repository page:</p>
+            <ol>
+                <li>Go to repository "Settings" tab</li>
+                <li>Scroll down to the "Pages" section</li>
+                <li>Under "Source", select "Deploy from a branch"</li>
+                <li>Select "main" branch and the root folder</li>
+                <li>Click "Save"</li>
+            </ol>
             <p>
-                On your repository page:
-                <ol>
-                    <li>Go to repository "Settings" tab</li>
-                    <li>Scroll down to the "Pages" section</li>
-                    <li>Under "Source", select "Deploy from a branch"</li>
-                    <li>Select "main" branch and the root folder</li>
-                    <li>Click "Save"</li>
-                </ol>
                 In the end, it should look like so:
-                <img src="../images/pages-configured.png">
+                <img src="../images/pages-configured.png" width="80">
             </p>
             <p>
                 After a short period of time (shouldn't take more than 5 minutes), your site will be live at:
-                <br>https://username.github.io/repo-name<br>
+                <br>username.github.io/repo-name<br>
                 <br>
                 Or, simply reload the "Pages" tab and you'll see the link:
-                <img src="../images/link-created.png"> 
+                <img src="../images/link-created.png" width="80"> 
                 <br> 
             </p>
             <p>
