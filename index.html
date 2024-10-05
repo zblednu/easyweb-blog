@@ -4,35 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | EasyWeb</title>
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <base   href="/home/dust/repos/easyweb-blog/"
+            target = "_self">
+    <link rel="stylesheet" href="screenStyle.css">
 </head>
 <body>
     <header>
-        <h1>EasyWeb <img src="fig/bird.svg" alt="EasyWeb logo" width="5px"></h1>
+        <div id="logo">
+            EasyWeb
+            <img src="fig/logo.svg" alt="EasyWeb logo">
+        </div>
         About
     </header>
-    <main>
-        <nav>
-            <div class="articles">
-                <h3>Articles:</h3>
-                <ul>
-                    <li><a href="articles/host-your-website-for-free.html">Host your website for free</a></li>
-                </ul>
-            </div>
 
-            <div class="coming-soon">
-                <h3>Coming soon...</h3>
-                <ul>
-                    Must-have VSCode extension
-                </ul>
-            </div>
+    <main>
+        <nav id="site-wide-navigation">
+            <h3>Articles:</h3>
+            <ul>
+                <li><a href="articles/article1.html">Host your website for free</a></li>
+                <li><a href="articles/article2.html">Must-have VSCode extensions</a></li>
+            </ul>
+            <h3>Coming soon...</h3>
+            <ul>
+                <li><a href="articles/article3.html">Flexbox for dummies</a></li>
+            </ul>
         </nav>
+
         <article>
-            <h2>About </h2>
+            <h1>About</h1>
             <p>
                 This blog is my assignment for AWT class in my uni. 
                 It's purpose is to help my peers with creating their own blogs for this subject.
@@ -40,6 +39,11 @@
                 <br>
                 <br>
                 Everything is presented in a simple language and the useless info is trimmed down, so you can get what you need <em>fast</em>. 
+            </p>
+
+            <p>
+                <h2>Contacts:</h2>
+                <a href="mailto:maksym.surovtsev@student.tuke.sk">maksym.surovtsev@student.tuke.sk</a>
             </p>
         </article>
     </main>

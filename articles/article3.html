@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Host your website for free | EasyWeb</title>
-    <link rel="stylesheet" href="../style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <title>Flexbox for dummies | EasyWeb</title>
+    <base   href="/home/dust/repos/easyweb-blog/"
+            target = "_self">
+    <link rel="stylesheet" href="screenStyle.css">
 </head>
 <body>
     <header>
-        <h1>EasyWeb</h1>
-        <a href="../index.html">About</a>
+        <div id="logo">
+            EasyWeb
+            <img src="fig/logo.svg" alt="EasyWeb logo">
+        </div>
+        <a href="index.html">About</a>
     </header>
-    <main>
-        <nav>
-            <div class="articles">
-                <h3>Articles:</h3>
-                <ul>
-                    <li>Host your website for free</li>
-                </ul>
-            </div>
 
-            <div class="coming-soon">
-                <h3>Coming soon...</h3>
-                <ul>
-                </ul>
-            </div>
+    <main>
+        <nav id="site-wide-navigation">
+            <h3>Articles:</h3>
+            <ul>
+                <li><a href="articles/article1.html">Host your website for free</a></li>
+                <li><a href="articles/article2.html">Must-have VSCode extensions</a></li>
+            </ul>
+            <h3>Coming soon...</h3>
+            <ul>
+                <li>Flexbox for dummies</li>
+            </ul>
         </nav>
+
         <article>
-            <h2>Coming soon</h2>
-            <img src="../fig/git.png" alt="git logo">
-            <p>Here will be article on basics of git, i guess</p>
+            <section>
+                <h1>Coming soon</h1>
+                <p>Here will be article on basics of flexbox, i guess</p>
+            </section>
         </article>
         <aside>
             <h3>Jump to:</h3>
