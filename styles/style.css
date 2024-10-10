@@ -1,26 +1,24 @@
 /* GENERAL */
-ul {
-    list-style-type: none;
+html {
+    font-size: 14px;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: none;
 }
-
 
 body {
     display: flex;
     flex-direction: column;
     background-color: #2b2a33;
     color: #cfcfd8;
-    margin: 0 auto;
-    width: 90vw;
+    margin: 2rem auto;
+    width: 85vw;
     min-height: 100vh;
     font-family: 'Segoe UI', sans-serif;
-    font-size: 1.1rem;
-    gap: 1rem;
 }
 
 #page-wide-navigation {
@@ -36,51 +34,43 @@ a:hover {
     text-decoration: underline;
 }
 
-h1,
-h2,
-h3 {
-    color:  #fbfbfe;
-    margin-left: -0.5rem;
-}
-
 h1 {
     font-size: 2.5rem;
+}
+
+ul {
+    list-style-type: square;
 }
 
 /* HEADER */
 header {
     display: flex;
     align-items: center;
-    font-size: 1.4rem;
-    margin: 3rem 0 2rem;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1.5rem;
 }
 
 #logo {
-    margin-right: auto;
     display: flex;
-    align-items: flex-end;
-    max-width: max-content;
+    align-items: center;
+    gap: 1rem;
     font-size: 3rem;
     font-weight: bold;
-    gap: 1rem;
     color: white;
 }
 
 #logo img {
-    width: 1.7em;
+    height: 3rem;
 }
-
 
 /*MAIN*/
 main {
-    justify-content: center;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
-    flex-wrap: wrap;
     flex-grow: 1;
-    gap: 5rem;
 }
 
 main > * {
@@ -90,12 +80,6 @@ main > * {
 
 nav {
     gap: 1rem;
-}
-
-article {
-    flex: 1;
-    min-width: 50%;
-    gap: 3rem;
 }
 
 section {
@@ -125,46 +109,10 @@ main img {
     width: 100%;
 }
 
-
-caption {
-    font-size: 1.3em;
-    margin-bottom: 0.8rem;
-    font-weight: bold;
-}
-
-td,
-th {
-    border: 1px solid white;
-    text-align: center;
-    padding: 0.4rem 0;
-}
-
-table td:first-child {
-    padding: 0;
-}
-
 /* FOOTER */
 footer {
     text-align: center;
     opacity: 30%;
     padding: 2rem;
     font-size: 0.9rem;
-}
-
-@media (min-width: 1024px) {
-    body {
-        width: 70vw;
-    }
-
-    main {
-        flex-direction: row;
-    }
-
-    article {
-        max-width: 50%;
-    }
-
-    #page-wide-navigation {
-        display: initial;
-    }
 }
