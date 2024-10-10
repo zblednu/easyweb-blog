@@ -9,17 +9,22 @@ ul {
     padding: 0;
 }
 
+
 body {
     display: flex;
     flex-direction: column;
     background-color: #2b2a33;
     color: #cfcfd8;
     margin: 0 auto;
-    width: 80vw;
+    width: 90vw;
     min-height: 100vh;
     font-family: 'Segoe UI', sans-serif;
     font-size: 1.1rem;
     gap: 1rem;
+}
+
+#page-wide-navigation {
+    display: none;
 }
 
 a {
@@ -36,6 +41,10 @@ h2,
 h3 {
     color:  #fbfbfe;
     margin-left: -0.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
 }
 
 /* HEADER */
@@ -66,7 +75,9 @@ header {
 
 /*MAIN*/
 main {
+    justify-content: center;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     flex-grow: 1;
     gap: 5rem;
@@ -138,4 +149,22 @@ footer {
     opacity: 30%;
     padding: 2rem;
     font-size: 0.9rem;
+}
+
+@media (min-width: 1024px) {
+    body {
+        width: 70vw;
+    }
+
+    main {
+        flex-direction: row;
+    }
+
+    article {
+        max-width: 50%;
+    }
+
+    #page-wide-navigation {
+        display: initial;
+    }
 }
