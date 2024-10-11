@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Must-have VSCode extensions | EasyWeb</title>
+    <title>Must-have VSCode extension | EasyWeb</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
@@ -29,14 +29,27 @@
         </nav>
 
         <article>
-            <h1>Must-have VSCode Extension</h1>
-            <img src="../fig/livepreview.png" alt="extension tab with LivePreview selected">
-            <p>This will allow you to see changes made to the page you're working on in real-time. Much better than spamming the "F5" button.</p>
+            <section>
+                <h1>Must-have VSCode Extension</h1>
+                <p>Open up your VSCode and install this:</p>
+                <img src="../fig/livepreview.png" alt="extension tab with LivePreview selected">
+                <p>
+                    What it does is it will allow you to see changes made to the page you're working on in real-time. Much better than spamming the "F5" button.
+                    <br>
+                    Just open any html file with VSCode, press this icon in the top-right corner and try it out:
+                </p>
+                <img src="../fig/show-preview.png" alt="Button &quot;Show Preview&quot; that starts the extension">
+                <div class="warning">
+                    <strong>! Be aware that the changes will be applied immidiately as you make them, without the need for you to save the file</strong> (extension creates copy of your working folder that is auto-saved on any change).
+                    So keep in mind that some stupid thing like accidental infinite loop in javascript will be executed as soon as the closing bracket for it is typed.
+                    And the next thing you see is "VSCode not responding". Yes, that happened.
+                </div>
+            </section>
         </article>
 
-        <nav id="page-wide-navigation">
+        <nav id="page-wide-navigation" hidden>
             <h3>Jump to:</h3>
-            <ol type="1">
+            <ol>
                 <li></li>
                 <li></li>
                 <li></li>

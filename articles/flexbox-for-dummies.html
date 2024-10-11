@@ -29,28 +29,30 @@
         </nav>
 
         <article>
-            <section id="flexbox-for-dummies">
+            <section>
                 <h1>Flexbox for dummies</h1>
                 <p> 
                     What is flexbox?
+                    <br>
                     Everything on a page is a box. Boxes containing boxes containing boxes...
-                    Flexbox is a way to arrange them Normally that is called layout model. 
+                    <br>
+                    Flexbox is a way to arrange them. Normally that is called layout model. 
                 </p>
             </section>
 
             <section id="basics">
                 <h2>Basics</h2>
                 <p>
-                    To start with flexbox we have to specify display: flex as css property for the outer box, that is our flex container.
-                    From now on every single element contained inside of it is referred to as flex item.
+                    To start with flexbox we have to specify <b>display: flex</b> as a css property for the outer box, that is the flex container.
+                    From now on every single element contained inside is referred to as flex item.
                     <br>
-                    Try adding display: flex to container properties.
+                    Add <b>display: flex</b> to container properties:
                     <iframe height="300" style="width: 100%;" scrolling="no" title="display: flex" src="https://codepen.io/easyweb-blog/embed/YzmpYBQ?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
                         See the Pen <a href="https://codepen.io/easyweb-blog/pen/YzmpYBQ">
                         display: flex</a> by EasyWeb (<a href="https://codepen.io/easyweb-blog">@easyweb-blog</a>)
                         on <a href="https://codepen.io">CodePen</a>.
                     </iframe>
-                    So, box that contains - container.
+                    So, the box that contains - container.
                     <br>
                     Boxes that are contained - items.
                     <br>
@@ -61,12 +63,13 @@
             <section id="container-properties">
                 <h2>Container properties</h2>
                 <section>
-                    <h3>flex-direction:</h3>
+                    <h3>flex-direction</h3>
                     <p>
                         As you have noticed it arranged our items in a straight line. That line is called main axis. It can either be horizontal(row) spanning left to right, or vertical(column) spanning top to bottom.
-                        flex-direction sets the direction for the main axis. Try changing the values to see the effect. 
                         <br>
-                        Possible values are: row, column, reverse-row, reverse-column.
+                        <b>flex-direction</b> sets the direction for main axis. Try changing it to see the effect. 
+                        <br>
+                        Possible values are: <b>row, column, row-reverse, column-reverse</b>
                     </p>
                     <iframe height="300" style="width: 100%;" scrolling="no" title="flex-direction" src="https://codepen.io/easyweb-blog/embed/BaXLxXv?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
                         See the Pen <a href="https://codepen.io/easyweb-blog/pen/BaXLxXv">
@@ -76,10 +79,12 @@
                 </section>
 
                 <section>
-                    <h3>justify-content:</h3>
+                    <h3>justify-content</h3>
                     <p>
-                        This specifies how we align items along the main axis. Go play with it, possible values are: 
-                        center, flex-start, flex-end, space-between, space-around, space-evenly.
+                        This one aligns items along the main axis. 
+                        <br>
+                        Go play with it, possible values are: 
+                        <b>center, flex-start, flex-end, space-between, space-evenly</b>
                     </p>
                     <iframe height="300" style="width: 100%;" scrolling="no" title="justify-content" src="https://codepen.io/easyweb-blog/embed/LYwbGLG?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
                         See the Pen <a href="https://codepen.io/easyweb-blog/pen/LYwbGLG">
@@ -89,24 +94,29 @@
                 </section>
                 
                 <section>
-                    <h3>align-items:</h3>
+                    <h3>align-items</h3>
                     <p>
-                        And in this we specify how to align items along cross axis. Again, go and try it for yourself.
-                        Values are: flex-start, flex-end, center, baseline, stretch.
+                        And this one aligns along the cross axis(the one perpendicular to main axis). 
+                        <br>
+                        Again, go and try it for yourself.
+                        <br>
+                        Values: <b>flex-start, flex-end, center, stretch</b>
                     </p>
                     <iframe height="300" style="width: 100%;" scrolling="no" title="align-items" src="https://codepen.io/easyweb-blog/embed/ExqNPOV?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
                         See the Pen <a href="https://codepen.io/easyweb-blog/pen/ExqNPOV">
                         align-items</a> by EasyWeb (<a href="https://codepen.io/easyweb-blog">@easyweb-blog</a>)
                         on <a href="https://codepen.io">CodePen</a>.
                     </iframe>
-                    You may noticed have noticed that the default behavior is stretch. 
+                    <p>
+                        Note that the default behavior is stretch. 
+                    </p>
                 </section>
                 
                 <section>
-                    <h3>flex-wrap:</h3>
+                    <h3>flex-wrap</h3>
                     <p>
-                        This specifies wether we want to wrap our content in several lines in case of overflow(e.g. when our container becomes so small that it's items start to peak out, this occurs when, for example, screen width is too narrow)
-                        Values are: wrap, wrap-reverse
+                        This specifies wether to wrap items in several lines in case of overflow (e.g. when our container becomes so small that it's items start to peak out, this occurs when, for example, screen width is too narrow)
+                        Values: <b>wrap, wrap-reverse</b>
                     </p>
                     <iframe height="300" style="width: 100%;" scrolling="no" title="flex-wrap" src="https://codepen.io/easyweb-blog/embed/wvVoMRE?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
                         See the Pen <a href="https://codepen.io/easyweb-blog/pen/wvVoMRE">
@@ -118,29 +128,50 @@
 
             <section id="item-properties">
                 <h2>Item properties</h2>
+                <div class="warning">
+                    <strong>! This is where i trimmed the most info. I've left only what is used on the day-to-day basis.</strong>
+                    Be aware that it's not everything there is, and you might need to dig deeper when working on more complicated projects.
+                </div>
                 <section>
-                    <h3>flex-grow:</h3>
+                    <h3>flex-grow</h3>
                     <p>
-                        Specifies how much item will grow relative to other items. Grow is only when we have a free space along main axis.
-                        I could bloat you with in depth explanation of how this works. But in practice, you will mostly need two values for this property: 0 - it won't grow, 1 - it will grow. Default is 0.
+                        Specifies wether the item should grow along main axis to fill empty space.
+                        <br>
+                        <b>
+                            0 - it won't grow
+                            <br>
+                            1 - it will
+                        </b>
                     </p>
                     <iframe height="300" style="width: 100%;" scrolling="no" title="flex-grow" src="https://codepen.io/easyweb-blog/embed/vYoydpr?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
                         See the Pen <a href="https://codepen.io/easyweb-blog/pen/vYoydpr">
                         flex-grow</a> by EasyWeb (<a href="https://codepen.io/easyweb-blog">@easyweb-blog</a>)
                         on <a href="https://codepen.io">CodePen</a>.
                     </iframe>
+                    <p>
+                        Note that the default value is 0.
+                    </p>
                 </section>
 
                 <section>
-                    <h3>flex-shrink:</h3>
+                    <h3>flex-shrink</h3>
                     <p>
-                        much as the flex-grow, it determines how an item will shrink. Similarly, 0 - it won't shrink, 1 - it will.
+                        Same as the flex-grow, it determines wether an item should shrink to fit. 
+                        <br>
+                        Similarly, 
+                        <br>
+                        <b>
+                            0 - it won't shrink
+                            <br>
+                            1 - it will
+                        </b>
                     </p>
                     <iframe height="300" style="width: 100%;" scrolling="no" title="flex-shrink" src="https://codepen.io/easyweb-blog/embed/LYwbQde?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
                         See the Pen <a href="https://codepen.io/easyweb-blog/pen/LYwbQde">
                         flex-shrink</a> by EasyWeb (<a href="https://codepen.io/easyweb-blog">@easyweb-blog</a>)
                         on <a href="https://codepen.io">CodePen</a>.
                     </iframe>
+                    <b>Note that by default shrink is set to 1!</b>
                 </section>
             </section>
 
@@ -148,7 +179,7 @@
             <section id="one-more-thing">
                 <h2>One more thing</h2>
                 <p>
-                    So that's it. But don't leave just yet. Got a link for you...
+                    So that's it. But don't leave just yet. Got a link for you to practice new concepts.
                 </p>
                 <a href="https://flexboxfroggy.com/">flexboxfroggy.com</a>
             </section>
@@ -163,6 +194,6 @@
             </ol>
         </nav>
     </main>
-    <footer>2024 . All rights reserved.</footer>
+    <footer>2024 Maksym Surovtsev. All rights reserved.</footer>
 </body>
 </html>
