@@ -56,6 +56,12 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 1.5rem;
+
+
+    position: sticky;
+    top: 0px;
+    background-color: inherit;
+    border-bottom: 2px solid;
 }
 
 #logo {
@@ -140,14 +146,19 @@ footer {
         max-width: 100rem;
     }
     main {
-        justify-content: space-between;
-        flex-direction: row;
-        gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr;
     }
 
     article {
-        max-width: 50%;
+        max-width: 70ch;
     }
+
+    p {
+        max-width: 70ch;
+    }
+
 
     #page-wide-navigation {
         display: initial;
